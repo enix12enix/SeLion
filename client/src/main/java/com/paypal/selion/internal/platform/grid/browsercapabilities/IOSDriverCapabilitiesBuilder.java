@@ -56,8 +56,8 @@ class IOSDriverCapabilitiesBuilder extends DefaultCapabilitiesBuilder {
         if (StringUtils.isNotBlank(mobileSession.getAppLanguage())) {
         	iOSCapabilities.setCapability(IOSCapabilities.LANGUAGE, mobileSession.getAppLanguage());
         }
-        if (StringUtils.isNotBlank(mobileSession.getAppLanguage())) {
-        	iOSCapabilities.setCapability(IOSCapabilities.LANGUAGE, mobileSession.getAppLanguage());
+        if (StringUtils.isNotBlank(mobileSession.getAppLocale())) {
+        	iOSCapabilities.setCapability(IOSCapabilities.LOCALE, mobileSession.getAppLocale());
         }
     }
 
