@@ -40,8 +40,6 @@ class IOSDriverCapabilitiesBuilder extends DefaultCapabilitiesBuilder {
     private void setMandatoryCapabilitiesFor(IOSCapabilities iOSCapabilities) {
         MobileTestSession mobileSession = Grid.getMobileTestSession();
         iOSCapabilities.setCapability(IOSCapabilities.DEVICE, mobileSession.getDevice());
-        iOSCapabilities.setCapability(IOSCapabilities.LANGUAGE, mobileSession.getAppLanguage());
-        iOSCapabilities.setCapability(IOSCapabilities.LOCALE, mobileSession.getAppLocale());
         iOSCapabilities.setCapability(IOSCapabilities.BUNDLE_NAME, mobileSession.getAppName());
         iOSCapabilities.setCapability(MOBILE_NODE_TYPE, mobileSession.getMobileNodeType().getAsString());
     }
@@ -54,6 +52,12 @@ class IOSDriverCapabilitiesBuilder extends DefaultCapabilitiesBuilder {
         if (StringUtils.isNotBlank(mobileSession.getDeviceType())) {
             iOSCapabilities.setCapability(IOSCapabilities.VARIATION,
                     DeviceVariation.valueOf(mobileSession.getDeviceType()));
+        }
+        if (StringUtils.isNotBlank(mobileSession.getAppLanguage())) {
+        	iOSCapabilities.setCapability(IOSCapabilities.LANGUAGE, mobileSession.getAppLanguage());
+        }
+        if (StringUtils.isNotBlank(mobileSession.getAppLanguage())) {
+        	iOSCapabilities.setCapability(IOSCapabilities.LANGUAGE, mobileSession.getAppLanguage());
         }
     }
 

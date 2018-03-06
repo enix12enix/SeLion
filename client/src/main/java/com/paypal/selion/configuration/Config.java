@@ -538,16 +538,14 @@ public final class Config {
         MOBILE_APP_PATH("appPath", "", false),
 
         /**
-         * This parameter represents the language to be used. By default it is always <code>English</code> represented
-         * as <code>en</code>
+         * This parameter represents the language to be used.
          */
-        MOBILE_APP_LANGUAGE("mobileAppLanguage", "en", false),
+        MOBILE_APP_LANGUAGE("mobileAppLanguage", "", false),
 
         /**
-         * This parameter represents the locale to be used. By default it is always <code>US English</code> represented
-         * as <code>en_US</code>
+         * This parameter represents the locale to be used.
          */
-        MOBILE_APP_LOCALE("mobileAppLocale", "en_US", false),
+        MOBILE_APP_LOCALE("mobileAppLocale", "", false),
 
         /**
          * This parameter represents the main activity of Android mobile appplication. By default it is always empty.
